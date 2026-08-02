@@ -1,14 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rosie's Kitchen</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#f7c9d8" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Rosie's Kitchen" />
+  <title>Rosie's Kitchen</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<h1>Rosie's Kitchen 🌸</h1>
-<p>This is the starter version. Replace this with future updates as we build the app!</p>
-<script src="script.js"></script>
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>Rosie's Kitchen 🌸</h1>
+      <p class="subtitle">Meals, lunches and your weekly shopping list</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav class="nav">
+      <a href="#teas">🍽️ Teas</a>
+      <a href="#lunches">🥪 Lunches</a>
+      <a href="#shopping">🛒 Shopping</a>
+    </nav>
+
+    <section id="teas" class="card">
+      <h2 class="section-title">🍽️ This Week's Teas</h2>
+      <div class="meal-grid two">
+        <div class="meal"><span class="day">Sunday</span><div class="meal-name">Enchiladas</div></div>
+        <div class="meal"><span class="day">Monday</span><div class="meal-name">Bangers & Mash</div></div>
+        <div class="meal"><span class="day">Tuesday</span><div class="meal-name">Creamy Chicken, Bacon & Leek Pasta</div></div>
+        <div class="meal"><span class="day">Wednesday</span><div class="meal-name">Smothered Chicken, Mash & Veg</div></div>
+        <div class="meal"><span class="day">Thursday</span><div class="meal-name">Cheeseburger Pasta</div></div>
+        <div class="meal"><span class="day">Friday</span><div class="meal-name">Chicken & Stuffing Bake</div></div>
+      </div>
+    </section>
+
+    <section id="lunches" class="card">
+      <h2 class="section-title">🥪 Chris's Lunches</h2>
+      <div class="meal-grid two">
+        <div class="meal"><span class="day">Monday</span><div class="meal-name">Chicken, Mature Cheddar & Caramelised Onion Chutney Toastie</div></div>
+        <div class="meal"><span class="day">Tuesday</span><div class="meal-name">Chicken Tikka Wrap</div></div>
+        <div class="meal"><span class="day">Wednesday</span><div class="meal-name">Ham & Cheese Croissants</div></div>
+        <div class="meal"><span class="day">Thursday</span><div class="meal-name">BBQ Chicken Wrap</div></div>
+        <div class="meal"><span class="day">Friday</span><div class="meal-name">Bacon, Brie & Cranberry Bagel</div></div>
+      </div>
+    </section>
+
+    <section id="shopping" class="card">
+      <h2 class="section-title">🛒 Shopping List</h2>
+
+      <div class="progress-wrap">
+        <div class="progress-top">
+          <span id="progressText">0 of 0 items ticked</span>
+          <strong id="progressPercent">0%</strong>
+        </div>
+        <div class="progress"><div id="progressBar" class="progress-bar"></div></div>
+      </div>
+
+      <div class="shopping-columns">
+        <div>
+          <div class="category">
+            <h3>🥩 Meat & Protein</h3>
+            <div class="checklist">
+              <label class="item"><input type="checkbox" data-id="chicken-breasts"><span>Chicken breasts × 8</span></label>
+              <label class="item"><input type="checkbox" data-id="cooked-chicken"><span>Cooked chicken pieces</span></label>
+              <label class="item"><input type="checkbox" data-id="beef-mince"><span>Beef mince, 500g</span></label>
+              <label class="item"><input type="checkbox" data-id="sausages"><span>Pork sausages</span></label>
+              <label class="item"><input type="checkbox" data-id="smoked-bacon"><span>Smoked bacon</span></label>
+              <label class="item"><input type="checkbox" data-id="ham"><span>Thick-cut ham</span></label>
+            </div>
+          </div>
+
+          <div class="category">
+            <h3>🧀 Dairy & Chilled</h3>
+            <div class="checklist">
+              <label class="item"><input type="checkbox" data-id="mature-cheddar"><span>Mature cheddar</span></label>
+              <label class="item"><input type="checkbox" data-id="brie"><span>Brie</span></label>
+              <label class="item"><input type="checkbox" data-id="parmesan"><span>Parmesan</span></label>
+              <label class="item"><input type="checkbox" data-id="cream-cheese"><span>Cream cheese</span></label>
+              <label class="item"><input type="checkbox" data-id="double-cream"><span>Double cream</span></label>
+              <label class="item"><input type="checkbox" data-id="butter"><span>Butter</span></label>
+              <label class="item"><input type="checkbox" data-id="milk"><span>Milk</span></label>
+              <label class="item"><input type="checkbox" data-id="yogurts"><span>Yogurts</span></label>
+            </div>
+          </div>
+
+          <div class="category">
+            <h3>🥬 Fruit & Veg</h3>
+            <div class="checklist">
+              <label class="item"><input type="checkbox" data-id="potatoes"><span>Potatoes</span></label>
+              <label class="item"><input type="checkbox" data-id="leeks"><span>Leeks × 2</span></label>
+              <label class="item"><input type="checkbox" data-id="onions"><span>White onions</span></label>
+              <label class="item"><input type="checkbox" data-id="garlic"><span>Garlic</span></label>
+              <label class="item"><input type="checkbox" data-id="broccoli"><span>Broccoli</span></label>
+              <label class="item"><input type="checkbox" data-id="peas"><span>Frozen peas</span></label>
+              <label class="item"><input type="checkbox" data-id="lettuce"><span>Lettuce</span></label>
+              <label class="item"><input type="checkbox" data-id="grapes"><span>Grapes</span></label>
+              <label class="item"><input type="checkbox" data-id="apples"><span>Apples</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="category">
+            <h3>🥖 Bakery</h3>
+            <div class="checklist">
+              <label class="item"><input type="checkbox" data-id="white-bread"><span>Thick white bread</span></label>
+              <label class="item"><input type="checkbox" data-id="wraps"><span>Wraps</span></label>
+              <label class="item"><input type="checkbox" data-id="croissants"><span>Croissants</span></label>
+              <label class="item"><input type="checkbox" data-id="bagels"><span>Bagels</span></label>
+              <label class="item"><input type="checkbox" data-id="garlic-bread"><span>Garlic bread</span></label>
+            </div>
+          </div>
+
+          <div class="category">
+            <h3>🥫 Cupboard</h3>
+            <div class="checklist">
+              <label class="item"><input type="checkbox" data-id="pasta"><span>Pasta</span></label>
+              <label class="item"><input type="checkbox" data-id="stuffing"><span>Chicken stuffing mix</span></label>
+              <label class="item"><input type="checkbox" data-id="chicken-stock"><span>Chicken stock cubes</span></label>
+              <label class="item"><input type="checkbox" data-id="beef-stock"><span>Beef stock cubes</span></label>
+              <label class="item"><input type="checkbox" data-id="peppercorn-sauce"><span>Peppercorn sauce sachet</span></label>
+              <label class="item"><input type="checkbox" data-id="gravy"><span>Gravy granules</span></label>
+              <label class="item"><input type="checkbox" data-id="bbq-sauce"><span>BBQ sauce</span></label>
+              <label class="item"><input type="checkbox" data-id="tikka-mayo"><span>Chicken tikka mayo</span></label>
+              <label class="item"><input type="checkbox" data-id="onion-chutney"><span>Caramelised onion chutney</span></label>
+              <label class="item"><input type="checkbox" data-id="cranberry-sauce"><span>Cranberry sauce</span></label>
+            </div>
+          </div>
+
+          <div class="category">
+            <h3>🍫 Snacks</h3>
+            <div class="checklist">
+              <label class="item"><input type="checkbox" data-id="crisps"><span>Crisps</span></label>
+              <label class="item"><input type="checkbox" data-id="chocolate-biscuits"><span>Chocolate biscuits</span></label>
+              <label class="item"><input type="checkbox" data-id="cereal-bars"><span>Cereal bars</span></label>
+            </div>
+          </div>
+
+          <div class="category">
+            <h3>⭐ Check the Cupboards</h3>
+            <div class="checklist">
+              <label class="item"><input type="checkbox" data-id="oil"><span>Cooking oil</span></label>
+              <label class="item"><input type="checkbox" data-id="salt-pepper"><span>Salt & pepper</span></label>
+              <label class="item"><input type="checkbox" data-id="herbs"><span>Mixed herbs / seasonings</span></label>
+              <label class="item"><input type="checkbox" data-id="mayo"><span>Mayonnaise</span></label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-row">
+        <button class="primary" id="clearTicked">Clear ticked</button>
+        <button class="secondary" id="resetAll">Reset all</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">📝 Need Next Week</h2>
+      <textarea id="notes" class="notes" placeholder="Add anything you run out of here..."></textarea>
+    </section>
+
+    <p class="footer">Made with love for Rosie & Chris 💗</p>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
